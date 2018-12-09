@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Gib Sams</string>
+    <string name="company_logo">Company Logo</string>
+    <string name="slogan">It\'s okay to talk!</string>
+
+    <string name="disclaimer_title">DISCLAIMER</string>
+    <string name="disclaimer_content">You are completely anonymous, and no information you disclose will be stored.
+        By continuing you agree that if you decide to provide us with your details, we have a duty of care and will take the necessary steps to prevent any harm to you.
+    </string>
+    <string name="disclaimer_confirm">I agree. Continue</string>
+
+    <string name="about_us">About Us</string>
+    <string name="about_us_content">About Us
+        \n\nWe provide a charity helpline (#116123) that will be open Mondays to Fridays from 4:00 pm to midnight and 7:00pm till midnight on Saturdays and Sundays.
+        \n\nWe intend to increase the operational times in the near future once another batch of volunteers have completed their training.
+        \n\nIt is a confidential helpline which offers a listening service to anyone experiencing distress, despair or suicidal feelings.
+        \n\nIt is important for people to have the opportunity to explore difficult feelings.
+        \nBeing listened to in confidence, and being accepted without prejudice, without being judged, can alleviate general distress, despair and suicidal feelings.
+        \n\nOften being listened to is enough to help someone through a time of distress.
+        \nEven just showing that you are there for them, and that you know they are going through a distressing time, can in itself be a comfort.
+        \n\nFor people who are lonely, despairing and possibly even considering suicide, the helpline is often the last hope – a place where they can talk in complete confidence about their deepest fears and darkest secrets.
+        Suffering from an emotional crisis not only affects the person concerned, it can have a ripple effect on the families who are then also in need of emotional support.
+        \n\nGibSams volunteers are trained to listen; you can talk to them any time you like, in your own way, and off the record – about whatever’s getting to you. You do not have to give your name, neither does the listener; your call is anonymous and completely confidential and it cannot be traced back to you.
+
+    </string>
+
+    <string name="advice">Advice</string>
+    <string name="advice_content">Advice
+    \n\nIf You Have Suicidal Thoughts and Feelings
+    \n\n<b>Things to do:</b>
+    \n\nTalk with someone every day, preferably face to face.
+    Though you feel like withdrawing, ask trusted friends and acquaintances to spend time with you.
+    Or continue to call a crisis helpline and talk about your feelings.
+    \n\nMake a safety plan. Develop a set of steps that you can follow during a suicidal crisis.
+    It should include contact numbers for your doctor or therapist, as well as friends and family members who will help in an emergency.
+    \n\nMake a written schedule for yourself every day and stick to it, no matter what.
+    Keep a regular routine as much as possible, even when your feelings seem out of control.
+    \n\nGet out in the sun or into nature for at least 30 minutes a day.
+    \n\nExercise as vigorously as is safe for you. To get the most benefit, aim for 30 minutes of exercise per day. But you can start small. Three 10-minute bursts of activity can have a positive effect on mood.
+    \n\nMake time for things that bring you joy. Even if very few things bring you pleasure at the moment, force yourself to do the things you used to enjoy.
+    \n\nRemember your personal goals. You may have always wanted to travel to a particular place, read a specific book, own a pet, move to another place, learn a new hobby, volunteer, go back to school, or start a family. Write your personal goals down.
+    \n\n<b>Things to avoid:</b>
+    \n\nBeing alone. Solitude can make suicidal thoughts even worse. Visit a friend, or family member, or pick up the phone and call a crisis helpline.
+    \n\nAlcohol and drugs. Drugs and alcohol can increase depression, hamper your problem-solving ability, and can make you act impulsively.
+    \n\nDoing things that make you feel worse. Listening to sad music, looking at certain photographs, reading old letters, or visiting a loved one’s grave can all increase negative feelings.
+    \n\nThinking about suicide and other negative thoughts.
+    Try not to become preoccupied with suicidal thoughts as this can make them even stronger.
+    Don’t think and rethink negative thoughts. Find a distraction. Giving yourself a break from suicidal thoughts can help, even if it’s for a short time.
+    \n\n<b>Recovering from suicidal thoughts:</b>
+    \n\nEven if your suicidal thoughts and feelings have subsided, get help for yourself.
+    Experiencing that sort of emotional pain is itself a traumatizing experience.
+    Finding a support group or therapist can be very helpful in decreasing the chances that you will feel suicidal again in the future. You can get help and referrals from your doctor or from the organizations listed in our Recommended reading section.
+    \n\n5 steps to recovery
+    \n\nIdentify triggers or situations that lead to feelings of despair or generate suicidal thoughts, such as an anniversary of a loss, alcohol, or stress from relationships. Find ways to avoid these places, people, or situations.
+    \n\nTake care of yourself. Eat right, don’t skip meals, and get plenty of sleep. Exercise is also key: it releases endorphins, relieves stress, and promotes emotional well-being.
+    \n\nBuild your support network. Surround yourself with positive influences and people who make you feel good about yourself. The more you’re invested in other people and your community, the more you have to lose—which will help you stay positive and on the recovery track.
+    \n\nDevelop new activities and interests. Find new hobbies, volunteer activities, or work that gives you a sense of meaning and purpose. When you’re doing things you find fulfilling, you’ll feel better about yourself and feelings of despair are less likely to return.
+    \n\nLearn to deal with stress in a healthy way. Find healthy ways to keep your stress levels in check, including exercising, meditating, using sensory strategies to relax, practicing simple breathing exercises, and challenging self-defeating thoughts.
+    </string>
+
+    <string name="contact">Sam</string>
+    <string name="back">Back</string>
+    <string name="send">SEND</string>
+    <string name="type_a_message">Type a message...</string>
+
+</resources>
