@@ -21,11 +21,61 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("info", "Creating App");
         try {
-            Log.i("info", "App Creating");
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
             setConstants();
+        } catch (Exception ex) {
+            Log.e("error", ex.getMessage());
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        Log.i("info", "Starting App");
+        try {
+            super.onStart();
+        } catch (Exception ex) {
+            Log.e("error", ex.getMessage());
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        Log.i("info", "Resuming App");
+        try {
+            super.onResume();
+        } catch (Exception ex) {
+            Log.e("error", ex.getMessage());
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        Log.i("info", "Pausing App");
+        try {
+            super.onPause();
+        } catch (Exception ex) {
+            Log.e("error", ex.getMessage());
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i("info", "Stopping App");
+        try {
+            super.onStop();
+        } catch (Exception ex) {
+            Log.e("error", ex.getMessage());
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i("info", "Destroying App");
+        try {
+            super.onDestroy();
         } catch (Exception ex) {
             Log.e("error", ex.getMessage());
         }
