@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -50,8 +51,10 @@ public class MainActivity extends AppCompatActivity {
     public void openDisclaimerDialog(View v) {
         Log.i("info", "openDisclaimerDialog - start");
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(
+                new ContextThemeWrapper(this, R.style.popUpTheme));
         builder.setTitle(R.string.disclaimer_title);
+
         builder.setMessage(R.string.disclaimer_content);
         builder.setCancelable(true);
 

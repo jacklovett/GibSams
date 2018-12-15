@@ -1,7 +1,6 @@
 package com.gibsams.gibsams;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,11 +40,6 @@ public class ChatActivity extends AppCompatActivity {
     public void send(View v) {
         ViewGroup chatContentLayer = findViewById(R.id.conversation_content);
         sendMessage(chatContentLayer);
-        try {
-            Thread.sleep(2000);
-        } catch (Exception ex) {
-            Log.e("error", ex.getMessage());
-        }
         returnResponse(chatContentLayer);
     }
 
