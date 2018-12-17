@@ -1,19 +1,16 @@
 package com.gibsams.gibsams;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
-import android.support.v7.app.AlertDialog;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
+/**
+ * @author jacklovett
+ */
 public class MainActivity extends AppCompatActivity {
 
     private String ABOUT_US;
@@ -24,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Log.i("info", "Creating App");
         try {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
             setConstants();
+            setContentView(R.layout.activity_main);
         } catch (Exception ex) {
             Log.e("error", ex.getMessage());
         }
@@ -90,102 +87,31 @@ public class MainActivity extends AppCompatActivity {
         Log.i("info", "toContentPage: " + page + " - start");
         ViewGroup contentLayer = findViewById(R.id.contentLayout);
         contentLayer.removeAllViewsInLayout();
-        contentLayer.addView(createContentTextLayout(page));
+        try {
+            LayoutInflater layoutInflater = (LayoutInflater)
+                    this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            if (page.equals(ABOUT_US)) {
+                contentLayer.addView(layoutInflater.inflate(R.layout.about_us_page, contentLayer));
+            }
+            else if (page.equals(ADVICE)) {
+                contentLayer.addView(layoutInflater.inflate(R.layout.advice_page, contentLayer));
+            }
+        } catch (Exception ex) {
+            Log.e("error", "An error occurred while changing page" + ex.getMessage());
+        }
         Log.i("info", "toContentPage: " + page + " - end");
     }
 
     /**
-     * Opens dialog that will take the user to the chat
+     * Opens disclaimer dialog that will take the user to the chat
      * @param v
      */
     public void openDisclaimerDialog(View v) {
         Log.i("info", "openDisclaimerDialog - start");
-
-        final AlertDialog.Builder builder = new AlertDialog.Builder(
-                new ContextThemeWrapper(this, R.style.popUpTheme));
-        builder.setTitle(R.string.disclaimer_title);
-
-        builder.setMessage(R.string.disclaimer_content);
-        builder.setCancelable(true);
-
-        builder.setPositiveButton(R.string.disclaimer_confirm, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                toChat();
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.dismiss();
-            }
-        });
-
-        builder.show();
-
+        DisclaimerDialog disclaimerDialog = new DisclaimerDialog();
+        disclaimerDialog.show(getSupportFragmentManager(), "123");
         Log.i("info", "openDisclaimerDialog - end");
-    }
-
-    private void toChat() {
-        Intent intent = new Intent(this, ChatActivity.class);
-        startActivity(intent);
-    }
-
-    /**
-     * Here we create a ScrollView that contains the populated TextView
-     * @param page
-     * @return
-     */
-    private ScrollView createContentTextLayout(String page) {
-        Log.i("info", "createContentTextLayout - start");
-        FrameLayout.LayoutParams scrollLayoutParams = new FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.MATCH_PARENT,
-                FrameLayout.LayoutParams.FILL_PARENT);
-
-        scrollLayoutParams.setMargins(40, 0, 40, 40);
-
-        ScrollView contentScrollView = new ScrollView(this);
-        contentScrollView.setLayoutParams(scrollLayoutParams);
-        contentScrollView.setBackgroundColor(Color.WHITE);
-        contentScrollView.setPadding(30, 20, 30, 20);
-
-        TextView contentTextView = createTextView(page);
-        contentScrollView.addView(contentTextView);
-
-        Log.i("info", "createContentTextLayout - end");
-        return contentScrollView;
-    }
-
-    /**
-     * Set correct text content based on selected page
-     * @param page
-     * @return
-     */
-    private TextView createTextView(String page) {
-
-        FrameLayout.LayoutParams textViewLayoutParams =
-                new FrameLayout.LayoutParams(
-                        FrameLayout.LayoutParams.MATCH_PARENT,
-                        FrameLayout.LayoutParams.WRAP_CONTENT
-                );
-
-        textViewLayoutParams.setMargins(0, 20, 0, 0);
-
-        TextView textView = new TextView(this);
-        textView.setLayoutParams(textViewLayoutParams);
-        textView.setPadding(30, 30, 30, 30);
-        textView.setText(setPageContent(page));
-        textView.setTextSize(18);
-        return textView;
-    }
-
-    private String setPageContent(String page) {
-        String content = "";
-        if(page.equals(ABOUT_US))
-            content = getString(R.string.about_us_content);
-        else if (page.equals(ADVICE))
-            content = getString(R.string.advice_content);
-
-        return content;
     }
 
     private void setConstants() {
