@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Gib Sams</string>
     <string name="company_logo">Company Logo</string>
+    <string name="home">Home</string>
     <string name="slogan">It\'s okay to talk!</string>
 
     <string name="disclaimer_title">DISCLAIMER</string>
@@ -8,10 +9,11 @@
         By continuing you agree that if you decide to provide us with your details, we have a duty of care and will take the necessary steps to prevent any harm to you.
     </string>
     <string name="disclaimer_confirm">I agree. Continue</string>
+    <string name="disclaimer_cancel">Cancel</string>
 
     <string name="about_us">About Us</string>
-    <string name="about_us_content">About Us
-        \n\nWe provide a charity helpline (#116123) that will be open Mondays to Fridays from 4:00 pm to midnight and 7:00pm till midnight on Saturdays and Sundays.
+    <string name="about_us_content">
+        We provide a charity helpline (#116123) that will be open Mondays to Fridays from 4:00 pm to midnight and 7:00pm till midnight on Saturdays and Sundays.
         \n\nWe intend to increase the operational times in the near future once another batch of volunteers have completed their training.
         \n\nIt is a confidential helpline which offers a listening service to anyone experiencing distress, despair or suicidal feelings.
         \n\nIt is important for people to have the opportunity to explore difficult feelings.
@@ -25,8 +27,8 @@
     </string>
 
     <string name="advice">Advice</string>
-    <string name="advice_content">Advice
-    \n\nIf You Have Suicidal Thoughts and Feelings
+    <string name="advice_content">
+    If You Have Suicidal Thoughts and Feelings
     \n\n<b>Things to do:</b>
     \n\nTalk with someone every day, preferably face to face.
     Though you feel like withdrawing, ask trusted friends and acquaintances to spend time with you.

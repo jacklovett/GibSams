@@ -14,6 +14,9 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Date;
 
+/**
+ * @author jacklovett
+ */
 public class ChatActivity extends AppCompatActivity {
 
     @Override
@@ -25,7 +28,7 @@ public class ChatActivity extends AppCompatActivity {
         } catch(Exception ex) {
             Log.e("error", ex.getMessage());
         }
-        Log.i("info", "onCreate for ChatActivity - start");
+        Log.i("info", "onCreate for ChatActivity - end");
     }
 
     /**
@@ -96,6 +99,7 @@ public class ChatActivity extends AppCompatActivity {
         chatContentLayer.addView(responseView);
     }
 
+    // TODO: Make this a LinearLayout containing a TextView and DateView - should be able to then apply gravity on response view
     private TextView generateTextView(FrameLayout.LayoutParams layoutParams) {
 
         layoutParams.setMargins(0, 10, 0, 10);
